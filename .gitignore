@@ -363,6 +363,7 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Local configuration and secrets
-**/appsettings.Development.json.env
+**/appsettings.Development.json
+.env
 .env.*
 secrets.json

@@ -1,0 +1,77 @@
+@StudentManagementSystem.API_HostAddress = http://localhost:5091
+
+GET {{StudentManagementSystem.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+### Add a new student
+POST https://localhost:7234/api/Students
+Content-Type: application/json
+
+{
+  "id": 4,
+  "name": "Zainab Khan",
+  "email": "zainab@example.com",
+  "age": 23,
+  "course": "MCA"
+}
+### Update student details
+PUT https://localhost:7234/api/Students/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "Priya Singh",
+  "email": "priya.updated@example.com",
+  "age": 23,
+  "course": "MCA"
+}
+### Delete student with ID 3
+DELETE https://localhost:7234/api/Students/3
+### Add student to SQL Server
+POST https://localhost:7234/api/Students
+Content-Type: application/json
+
+{
+  "name": "Rahul Sharma",
+  "email": "rahul@example.com",
+  "age": 21,
+  "course": "BCA"
+}
+
+### Update Rahul Sharma
+PUT https://localhost:7234/api/Students/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Rahul Sharma",
+  "email": "rahul.updated@example.com",
+  "age": 22,
+  "course": "MCA"
+}
+
+### Add temporary student
+POST https://localhost:7234/api/Students
+Content-Type: application/json
+
+{
+  "name": "Test Student",
+  "email": "test@example.com",
+  "age": 20,
+  "course": "BCA"
+}
+
+  ### Delete temporary student
+DELETE https://localhost:7234/api/Students/3
+
+### Test invalid student data
+POST https://localhost:7234/api/Students
+Content-Type: application/json
+
+{
+  "name": "A",
+  "email": "invalid-email",
+  "age": 12,
+  "course": ""
+}
